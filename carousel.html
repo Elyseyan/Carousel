@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="lunbo.css">
+    <script src="lunbo.js"></script>
+</head>
+<body>
+    <div id="carousel">
+        <div id="index">
+            <li class="list-btn active" data-index="1"></li>
+            <li class="list-btn" data-index="2"></li>
+            <li class="list-btn" data-index="3"></li>
+            <li class="list-btn" data-index="4"></li>
+            <li class="list-btn" data-index="5"></li>
+        </div>
+        <div id="carousel-img">
+            <div class="img-content">
+                <img src="img/轮播.png">
+            </div>
+            <div class="img-content">
+                <img src="img/轮播2.png">
+            </div>
+            <div class="img-content">
+                <img src="img/轮播3.png">
+            </div>
+            <div class="img-content">
+                <img src="img/轮播2.png">
+            </div>
+            <div class="img-content">
+                <img src="img/轮播3.png">
+            </div>
+        </div>
+        <div id="prev" class="Btn"><</div>
+        <div id="next" class="Btn">></div>
+    </div>
+<script type="text/javascript">
+//    var container = document.getElementById('carousel');
+//    var timer;
+//    var indexBtn=document.getElementById("index").getElementsByTagName("li");
+//    var prev=document.getElementById("prev");
+//    var next=document.getElementById("next");
+//    var carouselImg=document.getElementById("carousel-img");
+//    var index=0;
+//    carouselImg.style.left="0";
+//    console.log(indexBtn);
+//    function showBtn() {
+//        for (var i in indexBtn) {
+//            indexBtn[i].className = "list-btn";
+//        }
+//    }
+//    function play() {
+//        timer = setInterval(function () {
+//            prev.onclick();
+//        }, 2000)
+//    }
+//    function stop() {
+//        clearInterval(timer);
+//    }
+//    for (var i in indexBtn) {
+//        indexBtn[i].onclick=function () {
+//            showBtn();
+//            this.className = "list-btn active";
+//            index=parseInt(this.getAttribute("data-index"))-1;
+//            carouselImg.style.left=parseInt(index)*(-600)+"px";
+//        }
+//    }
+//    prev.onclick = function () {
+//        if (index>=0&&index<2) {
+//            carouselImg.style.left=parseInt(carouselImg.style.left)-600+"px";
+//            index++;
+//            showBtn();
+//            indexBtn[index].className="list-btn active";
+//        }else if(index==2){
+//            carouselImg.style.left=0+"px";
+//            index=0;
+//            showBtn();
+//            indexBtn[index].className="list-btn active";
+//
+//        }
+//    };
+//    next.onclick = function () {
+//        if (index>0&&index<=2) {
+//            carouselImg.style.left=parseInt(carouselImg.style.left)+600+"px";
+//            index--;
+//            showBtn();
+//            indexBtn[index].className="list-btn active";
+//        }else if(index==0){
+//            carouselImg.style.left=-1200+"px";
+//            index=2;
+//            showBtn();
+//            indexBtn[index].className="list-btn active";
+//        }
+//        console.log(index)
+//    };
+//    container.onmouseover = stop;
+//    container.onmouseout = play;
+    var carousel=new Carousel("carousel","index","carousel-img","prev","next");
+    carousel.init();
+    carousel.BtnClick();
+    carousel.prevClick();
+    carousel.nextClick();
+    carousel.autoPlay();
+
+</script>
+</body>
+</html>
